@@ -11,7 +11,7 @@ RUN mkdir -pv /var/www/html/centos/
 VOLUME ["/var/www/html/centos/"]
 
 #Download the repos -- you can change your prefered or near repo to download the pachages
-/usr/bin/rsync -avrt rsync://mirrors.psychz.net/Centos/ /var/www/html/centos/
+RUN rsync -avrt rsync://mirrors.psychz.net/Centos/ /var/www/html/centos/
 
 RUN echo "ServerName localhost" >> /etc/httpd/conf/httpd.conf
 
